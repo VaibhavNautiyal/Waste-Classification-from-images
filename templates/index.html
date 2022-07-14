@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 offset-sm-2">
+  </div>
+</div>
+<div class="row">
+  <div class="mb-2 col-md-6 offset-md-3">
+    <form action="/infer" method="POST" enctype="multipart/form-data">
+      <div class="input-group">
+        <div class="custom-file">
+         <fieldset> <input type="file" name="file" accept=".jpg, .jpeg, .png" class="custom-file-input" id="inputGroupFile"
+            aria-describedby="inputGroupFileAddon04" style="cursor:pointer ; font-weight: 700 ;display: inline-block">
+          <label class="custom-file-label" for="inputGroupFile">Input Image</label>
+        </div>
+        <div class="input-group-append">
+          <input type="submit" value="PREDICT" style="background-color: black;" class="btn btn-outline-secondary" type="button"
+            id="inputGroupFileAddon04" /> </fieldset>
+        </div> 
+
+        <div class="pricing-header px-6 py-6 pt-md-5 pb-md-4 mx-auto text-center">
+          <p class="text-muted"></p>
+          <p class="text-muted">The neural network that we designed using Pytorch was trained on this <a href='https://github.com/garythung/trashnet'>dataset. </a> </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
